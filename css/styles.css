@@ -1,15 +1,38 @@
+
+/* Basic Styles - Mobile
+
+Tablet
+@media only screen and (min-width: 768px)
+
+Desktop
+@media only screen and (min-width: 1158px)
+
+*/
+
+/* Basic Styles */
 body {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    background-color: #FFFFFF;}
+    background-color: #FFFFFF;
+}
 
-    h1, h2, h3, p {margin: 0;}
+/* Desktop */
+@media only screen and (min-width: 1158px) {
+    body {
+    font-weight: 400;
+    }
+}
 
-h2 {font-weight: 700;
+
+/* Made for Desktop - have to check for other versions */
+h1, h2, h3, p {margin: 0;}
+
+h2 {
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -19,12 +42,16 @@ h2 {font-weight: 700;
     margin-bottom: 72px;
 }
 
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+}
 
-ul, ol {list-style-type: none;
-margin: 0;
-padding-left: 0;}
-
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+/* ! STOPPED HERE ! */
 
 h3 {font-weight: 500;
     font-size: 20px;
@@ -42,14 +69,30 @@ img {
 input {
     font-family: inherit;
 }
-
+/* Mobile Screen - Basic Styles */
 .container {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 320px;
+    padding: 0 16px;
+    margin: 0 auto;
 }
+
+/* Tablet Screen */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 736px;
+    }
+}
+
+/* Desctop Screen */
+@media only screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+}
+    
+
+    
 
 .section {
     padding: 120px 0;
@@ -454,7 +497,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* #endregion */
 
-/* #region Modal */
+#region Modal
 .backdrop {
     position: fixed;
     top: 0;
