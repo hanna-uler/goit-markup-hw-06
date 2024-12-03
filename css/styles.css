@@ -190,13 +190,13 @@ input {
         align-items: center;
         justify-content: space-between;
     }
-
-    .nav {
-        display: flex;
-        align-items: center;
-        flex-grow: 1;
-    }
 }
+.nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
 .logo {font-family:"Raleway",
     sans-serif;
     font-weight: 700;
@@ -795,4 +795,21 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     min-width: 169px;
     height: 56px;
 }
+/* #endregion */
+
+/* #region Mobile menu */
+.header-burger-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+@media only screen and (min-width: 768px) {
+    .header-burger-btn {
+        display: none;
+    }
+}
+
 /* #endregion */
