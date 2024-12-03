@@ -35,7 +35,7 @@ body {
 /* Made for Desktop - have to check for other versions */
 h1, h2, h3, p {margin: 0;}
 
-h2, .features-subtitle {
+h2, .features-subtitle, .menu-window-list {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -55,7 +55,6 @@ ul, ol {
     margin: 0;
     padding-left: 0;
 }
-/* ! STOPPED HERE ! */
 
 h3 {font-weight: 500;
     font-size: 20px;
@@ -183,14 +182,21 @@ input {
       0 1px 1px 0 rgba(46, 47, 66, 0.16), 
       0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
-
-@media only screen and (min-width: 768px) {
-    .header-container {
+.header-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-grow: 1;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
-}
+
+    @media only screen and (min-width: 768px) {
+        .header-container {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
 .nav {
     display: flex;
     align-items: center;
@@ -812,4 +818,20 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
+.menu-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 72px 16px 40px 16px;
+}
+.menu-window-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+    margin-bottom: 0;
+}
 /* #endregion */
