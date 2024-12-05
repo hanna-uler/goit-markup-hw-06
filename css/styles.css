@@ -294,6 +294,7 @@ input {
 
 /* #region Hero Section */
 .hero-section {
+    max-width: 320px;
     background-color: #2e2f42;
     background-position: center;
     background-repeat: no-repeat;
@@ -309,6 +310,7 @@ input {
 }
 @media only screen and (min-width: 768px) {
     .hero-section {
+        min-width: 768px;
         padding: 112px 0;
     }
 }
