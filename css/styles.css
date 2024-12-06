@@ -621,34 +621,33 @@ input {
     }
 }
 
-
 .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 72px;
 }
 @media only screen and (min-width: 768px) {
     .footer-container {
+        max-width: 584px;
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 24px;
+        align-items: baseline; 
     }
-
 }
 
 @media only screen and (min-width: 1158px) {
     .footer-container {
-        align-items: baseline; 
-        flex-direction: row;
+        max-width: 100%;
+        flex-wrap: nowrap;
         gap: 0;
     }
 }
 
-
 .footer-logo-box {
-    width: 264px;
-    /* margin-right: 120px; */
+    max-width: 264px;
 }
 @media only screen and (min-width: 1158px){
     .footer-logo-box {
@@ -656,38 +655,68 @@ input {
     }
 }
 
-
 .footer-logo {
-    display: inline-block;
+    display: block;
     margin-bottom: 16px;
+    text-align: center; 
 }
+@media only screen and (min-width: 768px) {
+    .footer-logo {
+        display: inline-block;
+    }
+}
+
+
+.logo-accent-light {color:#f4f4fd;}
 
 .footer-text {
     color: #f4f4fd;
 }
 
-.logo-accent-light {color:#f4f4fd;}
-
-
 .footer-box-header {
     margin-bottom: 16px;
     font-weight: 500;
     color: #fff;
+    text-align: center;
 }
+
+@media only screen and (min-width: 768px) {
+    .footer-box-header {
+        text-align: left;
+    }
+}
+
 .footer-socials-list {
     gap: 16px;
+    justify-content: center;
 }
 .footer .socials-link:hover, .footer .socials-link:focus {
     background-color: #31d0aa;
 }
 
-.footer-subscribe-box {
-    margin-left: 80px;
+
+@media only screen and (min-width: 1158px) {
+    .footer-subscribe-box {
+        margin-left: 80px;
+    }
 }
+
+
 .footer-form {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
 }
+
+@media only screen and (min-width: 768px) {
+    .footer-form {
+            flex-wrap: nowrap;
+            gap: 24px; 
+            justify-content: start;
+        }
+}
+
 .subscribe-label {
     display: block;
 }
@@ -710,10 +739,11 @@ input {
 
  .subscribe-button {
     display: flex;
-    min-width: 165px;
+    width: 165px;
     height: 40px;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
 .subscribe-icon {
