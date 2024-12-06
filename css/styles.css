@@ -290,6 +290,21 @@ input {
     }
 }
 
+.header-burger-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+    .header-burger-btn {
+        display: none;
+    }
+}
+
 /* #endregion */
 
 /* #region Hero Section */
@@ -451,8 +466,15 @@ input {
 /* #endregion */
 
 /* #region Team Section */
+
 .team-section {
     background-color: #f4f4fd;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .team-container {
+        max-width: 584px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -607,7 +629,12 @@ input {
     gap: 72px;
 }
 @media only screen and (min-width: 768px) {
-/* don't know how to do it(((( */
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+    }
+
 }
 
 @media only screen and (min-width: 1158px) {
@@ -621,8 +648,14 @@ input {
 
 .footer-logo-box {
     width: 264px;
-    margin-right: 120px;
+    /* margin-right: 120px; */
 }
+@media only screen and (min-width: 1158px){
+    .footer-logo-box {
+        margin-right: 120px;
+    }
+}
+
 
 .footer-logo {
     display: inline-block;
@@ -896,19 +929,7 @@ input {
 /* #endregion */
 
 /* #region Mobile menu */
-.header-burger-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-}
-@media only screen and (min-width: 768px) {
-    .header-burger-btn {
-        display: none;
-    }
-}
+
 
 .menu-window {
     display: flex;
