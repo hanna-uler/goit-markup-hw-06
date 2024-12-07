@@ -28,7 +28,7 @@ body {
 /* Made for Desktop - have to check for other versions */
 h1, h2, h3, p {margin: 0;}
 
-h2, .features-subtitle, .menu-window-list {
+h2, .menu-window-list {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -65,6 +65,15 @@ img {
 input {
     font-family: inherit;
 }
+
+.section {
+    padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+    .section {
+        padding: 120px 0;
+    }
+}
 /* Mobile Screen - Basic Styles */
 .container {
     max-width: 320px;
@@ -87,14 +96,6 @@ input {
     }
 }
     
-.section {
-    padding: 96px 0;
-}
-@media only screen and (min-width: 1158px) {
-    .section {
-        padding: 120px 0;
-    }
-}
 
 .visually-hidden {
     position: absolute;
@@ -257,7 +258,7 @@ input {
 .nav-link:hover, .nav-link:focus {color: #404bbf;}
 .nav-link:hover::after {background-color: #404bbf;}
     
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .header-address {
         display: none;
         }
@@ -444,16 +445,16 @@ input {
     .features-list {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        column-gap: 24px;
         align-items: baseline;
-        margin-bottom: 72px;
     }
 }
 
 @media only screen and (min-width: 1158px) {
     .features-list {
-        justify-content: center;}
+        justify-content: center;
     }
+ }
     
 .features-item {
         width: 288px;
@@ -489,17 +490,33 @@ input {
     }
 }
 
-.features-icon {
+/* .features-icon {
     position: absolute;
     display: inline-block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 .features-subtitle {
-     margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
 }
+@media only screen and (min-width: 768px) {
+    .features-subtitle {
+        text-align: left;
+    }
+}
+@media only screen and (min-width: 1158px) {
+    .features-subtitle {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
 /* #endregion */
 
 /* #region Team Section */
@@ -507,10 +524,16 @@ input {
 .team-section {
     background-color: #f4f4fd;
 }
-
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
+.team-container {
+    padding: 0 28px;
+}
+@media only screen and (min-width: 768px) {
     .team-container {
-        max-width: 584px;
+    padding: 0 108px; 
+}
+}
+@media only screen and (min-width: 1158px) {
+    .team-container {padding: 0 15px;
     }
 }
 
@@ -525,13 +548,12 @@ input {
 .team-card {
     background-color: #fff;
     border-radius: 0 0 4px 4px;
-    margin: 0 auto 72px auto;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    width: 264px;
 }
 @media only screen and (min-width: 768px) {
     .team-card {
         margin: 0;
+        width: calc((100% - 24px) / 2);
     }
 }
 @media only screen and (min-width: 1158px) {
@@ -539,9 +561,9 @@ input {
         width: calc((100% - 3 * 24px) / 4);
     }
 }
-/* .team-card {
-    width: calc((100% - 24px) / 2);
-} */
+.team-card:last-child {
+    margin-bottom: 0;
+}
 
 .team-card-descr {
     padding: 32px 0;
@@ -643,12 +665,11 @@ input {
 
 .footer {
     background-color: #2e2f42;
-    padding: 96px 16px;
+    padding: 96px 0;
 }
 @media only screen and (max-width: 768px) {
     .footer {
-        padding-top: 96px;
-        padding-bottom: 96px;
+        padding: 96px 0;
     }
 }
 @media only screen and (min-width: 1158px) {
@@ -664,10 +685,10 @@ input {
     justify-content: space-between;
     align-items: center;
     gap: 72px;
+    padding: 0 16px;
 }
 @media only screen and (min-width: 768px) {
     .footer-container {
-        max-width: 584px;
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 24px;
@@ -677,7 +698,6 @@ input {
 
 @media only screen and (min-width: 1158px) {
     .footer-container {
-        max-width: 100%;
         flex-wrap: nowrap;
         gap: 0;
     }
@@ -686,11 +706,11 @@ input {
 .footer-logo-box {
     max-width: 264px;
 }
-@media only screen and (min-width: 1158px){
+/* @media only screen and (min-width: 1158px){
     .footer-logo-box {
         margin-right: 120px;
     }
-}
+} */
 
 .footer-logo {
     display: block;
@@ -732,11 +752,11 @@ input {
 }
 
 
-@media only screen and (min-width: 1158px) {
+/* @media only screen and (min-width: 1158px) {
     .footer-subscribe-box {
         margin-left: 80px;
     }
-}
+} */
 
 
 .footer-form {
