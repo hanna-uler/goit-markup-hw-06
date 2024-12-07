@@ -88,7 +88,7 @@ input {
 }
     
 .section {
-    padding: 96px 16px;
+    padding: 96px 0;
 }
 @media only screen and (min-width: 1158px) {
     .section {
@@ -263,7 +263,7 @@ input {
         }
 }
 @media only screen and (min-width: 768px) {
-    .addres-list {
+    .address-list {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1034,7 +1034,6 @@ input {
     .menu-window {
         display: none;
     }
-
 }
 
 .menu-window-exit-btn {
@@ -1042,10 +1041,10 @@ input {
 }
 .menu-window-list {
     text-align: left;
-
+    margin-bottom: 0;
 }
 
-.menu-window-item {
+.menu-window-item:not(:last-child) {
     margin-bottom: 40px;
 }
 .menu-window-link {
@@ -1060,6 +1059,9 @@ input {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+}
+
+.menu-window-address-item:not(:last-child) {
     margin-bottom: 24px;
 }
 
