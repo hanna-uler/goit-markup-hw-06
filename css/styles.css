@@ -285,6 +285,7 @@ input {
    
     .address-list {
         display: flex;
+        flex-direction: row;
         gap: 40px;
         margin-right: auto;
         padding: 24px 0;
