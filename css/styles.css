@@ -693,14 +693,18 @@ input {
         flex-direction: row;
         flex-wrap: wrap;
         column-gap: 24px;
-        align-items: baseline; 
+        align-items: baseline;
+        justify-content: flex-start;
+        padding-left: 108px; 
     }
 }
 
 @media only screen and (min-width: 1158px) {
     .footer-container {
+        justify-content: space-between;
         flex-wrap: nowrap;
         gap: 0;
+        padding-left: 16px;
     }
 }
 
